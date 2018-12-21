@@ -1,4 +1,5 @@
 var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/productSelection');
 
 var itemSchema = mongoose.Schema({
   _id: Number,
@@ -13,9 +14,13 @@ var itemSchema = mongoose.Schema({
 
 var Item = mongoose.model('Item', itemSchema);
 
-var getItemById = function (callback) {
-
+var getItemById = function (id, callback) {
+  Item.findById(id, callback);
 }
 
-module.exports.getItem = getItem;
+var getAllItems = function(callback) {
+  Item.find(callback);
+}
 
+module.exports.getItemById = getItemById;
+module.exports.getAllItems = getAllItems;
