@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 var db = require('../db')
 
 app.get('/', function(req, res) {
-  res.send('Hello World!!!!');
+  res.send('Please visit /api/item for items');
 });
 
 app.get('/api/item', function(req, res) {
@@ -15,6 +15,7 @@ app.get('/api/item', function(req, res) {
     if (err) {
       console.log('There was an error: ', err);
     } else {
+      console.log('Here are the items.')
       res.json(results);
     }
   });
@@ -25,6 +26,7 @@ app.get('/api/item/:id', function(req, res) {
     if (err) {
       console.log('There was an error: ', err);
     } else {
+      console.log('Here is the item.')
       res.json(result);
     }
   });

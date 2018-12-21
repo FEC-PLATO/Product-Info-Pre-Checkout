@@ -24,3 +24,4 @@ var getAllItems = function(callback) {
 
 module.exports.getItemById = getItemById;
 module.exports.getAllItems = getAllItems;
+module.exports.Item = Item;
