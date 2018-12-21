@@ -1,7 +1,7 @@
 module.exports = [
   {
     "_id": 1,
-    "price": "$1,100.75",
+    "price": "$100.00",
     "totalRatings": 203,
     "averageRating": 1.09,
     "totalQuestions": 79,
