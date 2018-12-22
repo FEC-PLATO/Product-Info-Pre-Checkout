@@ -21,11 +21,5 @@ var getItemById = function (id, callback) {
   Item.findById(id, callback);
 }
 
-//retrieves all items
-var getAllItems = function(callback) {
-  Item.find(callback);
-}
-
 module.exports.getItemById = getItemById;
-module.exports.getAllItems = getAllItems;
 module.exports.Item = Item;

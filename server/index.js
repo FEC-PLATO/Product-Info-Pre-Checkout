@@ -1,26 +1,16 @@
 var express = require ('express');
 var app = express();
 var bodyParser = require('body-parser');
-// var mongoose = require('mongoose');
-// // mongoose.connect();
-// var db = mongoose.connection;
+
 var db = require('../db')
+var path = require('path');
+
+app.use(bodyParser.json());
+app.use(express.static(__dirname + '/../client/dist'));
 
 //will redirect user to the proper endpoint
 app.get('/', function(req, res) {
-  res.send('Please visit /api/item for items');
-});
-
-//get request route to retrieve all items
-app.get('/api/item', function(req, res) {
-  db.getAllItems(function(err, results) {
-    if (err) {
-      console.log('There was an error: ', err);
-    } else {
-      console.log('Here are the items.')
-      res.json(results);
-    }
-  });
+  res.send('Please enter id in url for item');
 });
 
 //get request route to retrieve one item by id
@@ -29,7 +19,7 @@ app.get('/api/item/:id', function(req, res) {
     if (err) {
       console.log('There was an error: ', err);
     } else {
-      console.log('Here is the item.')
+      console.log('Here is the item: ', result)
       res.json(result);
     }
   });
