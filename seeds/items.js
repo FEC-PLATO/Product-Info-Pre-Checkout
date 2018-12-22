@@ -1,5 +1,5 @@
 module.exports = [
-  {
+  new Item ({
     "_id": 1,
     "price": "$100.00",
     "totalRatings": 203,
@@ -17,8 +17,9 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 5
-  },
-  {
+  }),
+
+  new Item ({
     "_id": 2,
     "price": "$322.26",
     "totalRatings": 208,
@@ -36,8 +37,9 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 2
-  },
-  {
+  }),
+
+  new Item ({
     "_id": 3,
     "price": "$210.32",
     "totalRatings": 210,
@@ -55,8 +57,9 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 7
-  },
-  {
+  }),
+
+  new Item ({
     "_id": 4,
     "price": "$1,032.77",
     "totalRatings": 236,
@@ -74,8 +77,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 6
-  },
-  {
+  }),
+  new Item ({
     "_id": 5,
     "price": "$1,161.89",
     "totalRatings": 69,
@@ -93,8 +96,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 10
-  },
-  {
+  }),
+  new Item ({
     "_id": 6,
     "price": "$578.44",
     "totalRatings": 43,
@@ -112,8 +115,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 6
-  },
-  {
+  }),
+  new Item ({
     "_id": 7,
     "price": "$562.38",
     "totalRatings": 218,
@@ -131,8 +134,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 6
-  },
-  {
+  }),
+  new Item ({
     "_id": 8,
     "price": "$1,010.83",
     "totalRatings": 207,
@@ -150,8 +153,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 8
-  },
-  {
+  }),
+  new Item ({
     "_id": 9,
     "price": "$1,414.77",
     "totalRatings": 181,
@@ -169,8 +172,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 2
-  },
-  {
+  }),
+  new Item ({
     "_id": 10,
     "price": "$1,235.34",
     "totalRatings": 71,
@@ -188,8 +191,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 10
-  },
-  {
+  }),
+  new Item ({
     "_id": 11,
     "price": "$924.46",
     "totalRatings": 28,
@@ -207,8 +210,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 7
-  },
-  {
+  }),
+  new Item ({
     "_id": 12,
     "price": "$996.79",
     "totalRatings": 30,
@@ -226,8 +229,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 6
-  },
-  {
+  }),
+  new Item ({
     "_id": 13,
     "price": "$1,471.72",
     "totalRatings": 204,
@@ -245,8 +248,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 4
-  },
-  {
+  }),
+  new Item ({
     "_id": 14,
     "price": "$1,044.76",
     "totalRatings": 169,
@@ -264,8 +267,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 6
-  },
-  {
+  }),
+  new Item ({
     "_id": 15,
     "price": "$216.28",
     "totalRatings": 166,
@@ -283,8 +286,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 6
-  },
-  {
+  }),
+  new Item ({
     "_id": 16,
     "price": "$941.21",
     "totalRatings": 37,
@@ -302,8 +305,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 7
-  },
-  {
+  }),
+  new Item ({
     "_id": 17,
     "price": "$708.56",
     "totalRatings": 75,
@@ -321,8 +324,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 5
-  },
-  {
+  }),
+  new Item ({
     "_id": 18,
     "price": "$767.58",
     "totalRatings": 188,
@@ -340,8 +343,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 8
-  },
-  {
+  }),
+  new Item ({
     "_id": 19,
     "price": "$1,420.94",
     "totalRatings": 91,
@@ -359,8 +362,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 5
-  },
-  {
+  }),
+  new Item ({
     "_id": 20,
     "price": "$1,084.85",
     "totalRatings": 176,
@@ -378,8 +381,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 4
-  },
-  {
+  }),
+  new Item ({
     "_id": 21,
     "price": "$1,125.90",
     "totalRatings": 191,
@@ -397,8 +400,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 5
-  },
-  {
+  }),
+  new Item ({
     "_id": 22,
     "price": "$214.38",
     "totalRatings": 10,
@@ -416,8 +419,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 2
-  },
-  {
+  }),
+  new Item ({
     "_id": 23,
     "price": "$602.67",
     "totalRatings": 10,
@@ -435,8 +438,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 1
-  },
-  {
+  }),
+  new Item ({
     "_id": 24,
     "price": "$362.59",
     "totalRatings": 246,
@@ -454,8 +457,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 2
-  },
-  {
+  }),
+  new Item ({
     "_id": 25,
     "price": "$380.85",
     "totalRatings": 242,
@@ -473,8 +476,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 9
-  },
-  {
+  }),
+  new Item ({
     "_id": 26,
     "price": "$195.34",
     "totalRatings": 227,
@@ -492,8 +495,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 1
-  },
-  {
+  }),
+  new Item ({
     "_id": 27,
     "price": "$682.76",
     "totalRatings": 89,
@@ -511,8 +514,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 9
-  },
-  {
+  }),
+  new Item ({
     "_id": 28,
     "price": "$1,375.83",
     "totalRatings": 99,
@@ -530,8 +533,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 7
-  },
-  {
+  }),
+  new Item ({
     "_id": 29,
     "price": "$877.24",
     "totalRatings": 49,
@@ -549,8 +552,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 8
-  },
-  {
+  }),
+  new Item ({
     "_id": 30,
     "price": "$241.22",
     "totalRatings": 101,
@@ -568,8 +571,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 6
-  },
-  {
+  }),
+  new Item ({
     "_id": 31,
     "price": "$1,042.64",
     "totalRatings": 149,
@@ -587,8 +590,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 8
-  },
-  {
+  }),
+  new Item ({
     "_id": 32,
     "price": "$919.29",
     "totalRatings": 195,
@@ -606,8 +609,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 10
-  },
-  {
+  }),
+  new Item ({
     "_id": 33,
     "price": "$399.33",
     "totalRatings": 88,
@@ -625,8 +628,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 5
-  },
-  {
+  }),
+  new Item ({
     "_id": 34,
     "price": "$156.06",
     "totalRatings": 121,
@@ -644,8 +647,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 1
-  },
-  {
+  }),
+  new Item ({
     "_id": 35,
     "price": "$1,426.62",
     "totalRatings": 134,
@@ -663,8 +666,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 6
-  },
-  {
+  }),
+  new Item ({
     "_id": 36,
     "price": "$277.64",
     "totalRatings": 204,
@@ -682,8 +685,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 10
-  },
-  {
+  }),
+  new Item ({
     "_id": 37,
     "price": "$759.72",
     "totalRatings": 227,
@@ -701,8 +704,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 6
-  },
-  {
+  }),
+  new Item ({
     "_id": 38,
     "price": "$1,297.60",
     "totalRatings": 78,
@@ -720,8 +723,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 9
-  },
-  {
+  }),
+  new Item ({
     "_id": 39,
     "price": "$263.32",
     "totalRatings": 74,
@@ -739,8 +742,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 1
-  },
-  {
+  }),
+  new Item ({
     "_id": 40,
     "price": "$477.47",
     "totalRatings": 164,
@@ -758,8 +761,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 4
-  },
-  {
+  }),
+  new Item ({
     "_id": 41,
     "price": "$1,376.33",
     "totalRatings": 112,
@@ -777,8 +780,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 2
-  },
-  {
+  }),
+  new Item ({
     "_id": 42,
     "price": "$1,069.37",
     "totalRatings": 246,
@@ -796,8 +799,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 1
-  },
-  {
+  }),
+  new Item ({
     "_id": 43,
     "price": "$1,120.40",
     "totalRatings": 84,
@@ -815,8 +818,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 5
-  },
-  {
+  }),
+  new Item ({
     "_id": 44,
     "price": "$1,019.66",
     "totalRatings": 48,
@@ -834,8 +837,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 3
-  },
-  {
+  }),
+  new Item ({
     "_id": 45,
     "price": "$945.11",
     "totalRatings": 197,
@@ -853,8 +856,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 1
-  },
-  {
+  }),
+  new Item ({
     "_id": 46,
     "price": "$917.60",
     "totalRatings": 207,
@@ -872,8 +875,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 10
-  },
-  {
+  }),
+  new Item ({
     "_id": 47,
     "price": "$1,294.57",
     "totalRatings": 194,
@@ -891,8 +894,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 10
-  },
-  {
+  }),
+  new Item ({
     "_id": 48,
     "price": "$270.05",
     "totalRatings": 69,
@@ -910,8 +913,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 4
-  },
-  {
+  }),
+  new Item ({
     "_id": 49,
     "price": "$129.77",
     "totalRatings": 34,
@@ -929,8 +932,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 5
-  },
-  {
+  }),
+  new Item ({
     "_id": 50,
     "price": "$252.45",
     "totalRatings": 234,
@@ -948,8 +951,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 5
-  },
-  {
+  }),
+  new Item ({
     "_id": 51,
     "price": "$408.48",
     "totalRatings": 143,
@@ -967,8 +970,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 1
-  },
-  {
+  }),
+  new Item ({
     "_id": 52,
     "price": "$778.59",
     "totalRatings": 11,
@@ -986,8 +989,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 10
-  },
-  {
+  }),
+  new Item ({
     "_id": 53,
     "price": "$847.70",
     "totalRatings": 121,
@@ -1005,8 +1008,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 8
-  },
-  {
+  }),
+  new Item ({
     "_id": 54,
     "price": "$587.57",
     "totalRatings": 206,
@@ -1024,8 +1027,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 7
-  },
-  {
+  }),
+  new Item ({
     "_id": 55,
     "price": "$1,224.82",
     "totalRatings": 172,
@@ -1043,8 +1046,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 6
-  },
-  {
+  }),
+  new Item ({
     "_id": 56,
     "price": "$978.91",
     "totalRatings": 51,
@@ -1062,8 +1065,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 3
-  },
-  {
+  }),
+  new Item ({
     "_id": 57,
     "price": "$558.47",
     "totalRatings": 99,
@@ -1081,8 +1084,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 2
-  },
-  {
+  }),
+  new Item ({
     "_id": 58,
     "price": "$165.18",
     "totalRatings": 121,
@@ -1100,8 +1103,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 8
-  },
-  {
+  }),
+  new Item ({
     "_id": 59,
     "price": "$801.24",
     "totalRatings": 124,
@@ -1119,8 +1122,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 8
-  },
-  {
+  }),
+  new Item ({
     "_id": 60,
     "price": "$226.80",
     "totalRatings": 90,
@@ -1138,8 +1141,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 4
-  },
-  {
+  }),
+  new Item ({
     "_id": 61,
     "price": "$268.78",
     "totalRatings": 110,
@@ -1157,8 +1160,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 4
-  },
-  {
+  }),
+  new Item ({
     "_id": 62,
     "price": "$348.41",
     "totalRatings": 65,
@@ -1176,8 +1179,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 7
-  },
-  {
+  }),
+  new Item ({
     "_id": 63,
     "price": "$137.44",
     "totalRatings": 147,
@@ -1195,8 +1198,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 9
-  },
-  {
+  }),
+  new Item ({
     "_id": 64,
     "price": "$825.43",
     "totalRatings": 22,
@@ -1214,8 +1217,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 6
-  },
-  {
+  }),
+  new Item ({
     "_id": 65,
     "price": "$1,098.83",
     "totalRatings": 173,
@@ -1233,8 +1236,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 7
-  },
-  {
+  }),
+  new Item ({
     "_id": 66,
     "price": "$698.37",
     "totalRatings": 187,
@@ -1252,8 +1255,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 6
-  },
-  {
+  }),
+  new Item ({
     "_id": 67,
     "price": "$1,093.90",
     "totalRatings": 104,
@@ -1271,8 +1274,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 9
-  },
-  {
+  }),
+  new Item ({
     "_id": 68,
     "price": "$972.70",
     "totalRatings": 170,
@@ -1290,8 +1293,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 7
-  },
-  {
+  }),
+  new Item ({
     "_id": 69,
     "price": "$481.51",
     "totalRatings": 70,
@@ -1309,8 +1312,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 9
-  },
-  {
+  }),
+  new Item ({
     "_id": 70,
     "price": "$1,110.66",
     "totalRatings": 135,
@@ -1328,8 +1331,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 10
-  },
-  {
+  }),
+  new Item ({
     "_id": 71,
     "price": "$665.19",
     "totalRatings": 97,
@@ -1347,8 +1350,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 1
-  },
-  {
+  }),
+  new Item ({
     "_id": 72,
     "price": "$744.61",
     "totalRatings": 71,
@@ -1366,8 +1369,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 2
-  },
-  {
+  }),
+  new Item ({
     "_id": 73,
     "price": "$724.35",
     "totalRatings": 90,
@@ -1385,8 +1388,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 5
-  },
-  {
+  }),
+  new Item ({
     "_id": 74,
     "price": "$1,130.59",
     "totalRatings": 168,
@@ -1404,8 +1407,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 4
-  },
-  {
+  }),
+  new Item ({
     "_id": 75,
     "price": "$86.38",
     "totalRatings": 98,
@@ -1423,8 +1426,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 8
-  },
-  {
+  }),
+  new Item ({
     "_id": 76,
     "price": "$445.93",
     "totalRatings": 50,
@@ -1442,8 +1445,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 9
-  },
-  {
+  }),
+  new Item ({
     "_id": 77,
     "price": "$942.33",
     "totalRatings": 232,
@@ -1461,8 +1464,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 5
-  },
-  {
+  }),
+  new Item ({
     "_id": 78,
     "price": "$976.75",
     "totalRatings": 101,
@@ -1480,8 +1483,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 2
-  },
-  {
+  }),
+  new Item ({
     "_id": 79,
     "price": "$747.86",
     "totalRatings": 20,
@@ -1499,8 +1502,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 8
-  },
-  {
+  }),
+  new Item ({
     "_id": 80,
     "price": "$255.24",
     "totalRatings": 91,
@@ -1518,8 +1521,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 6
-  },
-  {
+  }),
+  new Item ({
     "_id": 81,
     "price": "$1,367.46",
     "totalRatings": 185,
@@ -1537,8 +1540,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 7
-  },
-  {
+  }),
+  new Item ({
     "_id": 82,
     "price": "$155.44",
     "totalRatings": 34,
@@ -1556,8 +1559,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 2
-  },
-  {
+  }),
+  new Item ({
     "_id": 83,
     "price": "$622.97",
     "totalRatings": 108,
@@ -1575,8 +1578,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 7
-  },
-  {
+  }),
+  new Item ({
     "_id": 84,
     "price": "$197.57",
     "totalRatings": 125,
@@ -1594,8 +1597,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 10
-  },
-  {
+  }),
+  new Item ({
     "_id": 85,
     "price": "$508.78",
     "totalRatings": 150,
@@ -1613,8 +1616,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 4
-  },
-  {
+  }),
+  new Item ({
     "_id": 86,
     "price": "$1,457.97",
     "totalRatings": 11,
@@ -1632,8 +1635,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 7
-  },
-  {
+  }),
+  new Item ({
     "_id": 87,
     "price": "$752.65",
     "totalRatings": 122,
@@ -1651,8 +1654,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 3
-  },
-  {
+  }),
+  new Item ({
     "_id": 88,
     "price": "$205.23",
     "totalRatings": 223,
@@ -1670,8 +1673,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 5
-  },
-  {
+  }),
+  new Item ({
     "_id": 89,
     "price": "$1,047.80",
     "totalRatings": 233,
@@ -1689,8 +1692,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 6
-  },
-  {
+  }),
+  new Item ({
     "_id": 90,
     "price": "$935.86",
     "totalRatings": 157,
@@ -1708,8 +1711,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 3
-  },
-  {
+  }),
+  new Item ({
     "_id": 91,
     "price": "$1,340.10",
     "totalRatings": 88,
@@ -1727,8 +1730,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 1
-  },
-  {
+  }),
+  new Item ({
     "_id": 92,
     "price": "$508.65",
     "totalRatings": 57,
@@ -1746,8 +1749,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 2
-  },
-  {
+  }),
+  new Item ({
     "_id": 93,
     "price": "$757.57",
     "totalRatings": 10,
@@ -1765,8 +1768,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 5
-  },
-  {
+  }),
+  new Item ({
     "_id": 94,
     "price": "$1,418.97",
     "totalRatings": 18,
@@ -1784,8 +1787,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 3
-  },
-  {
+  }),
+  new Item ({
     "_id": 95,
     "price": "$98.42",
     "totalRatings": 148,
@@ -1803,8 +1806,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 5
-  },
-  {
+  }),
+  new Item ({
     "_id": 96,
     "price": "$173.22",
     "totalRatings": 183,
@@ -1822,8 +1825,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 5
-  },
-  {
+  }),
+  new Item ({
     "_id": 97,
     "price": "$605.15",
     "totalRatings": 194,
@@ -1841,8 +1844,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 3
-  },
-  {
+  }),
+  new Item ({
     "_id": 98,
     "price": "$979.65",
     "totalRatings": 65,
@@ -1860,8 +1863,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 4
-  },
-  {
+  }),
+  new Item ({
     "_id": 99,
     "price": "$363.55",
     "totalRatings": 99,
@@ -1879,8 +1882,8 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 2
-  },
-  {
+  }),
+  new Item ({
     "_id": 100,
     "price": "$1,300.85",
     "totalRatings": 246,
@@ -1898,5 +1901,5 @@ module.exports = [
       "512GB"
     ],
     "quantityCanBuy": 7
-  }
+  })
 ]
