@@ -18,6 +18,7 @@ app.get('/api/item/:id', function(req, res) {
   db.getItemById(req.params.id, function(err, result) {
     if (err) {
       console.log('There was an error: ', err);
+      res.status(404).send('Error!');
     } else {
       console.log('Here is the item: ', result)
       res.json(result);

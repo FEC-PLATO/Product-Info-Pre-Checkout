@@ -17,8 +17,12 @@ var itemSchema = mongoose.Schema({
 var Item = mongoose.model('Item', itemSchema);
 
 //retrieves the item by id
-var getItemById = function (id, callback) {
-  Item.findById(id, callback);
+// var getItemById = function (id, callback) {
+//   Item.findById(id, callback);
+// }
+
+const getItemById = function (id) {
+  return Item.findById(id);
 }
 
 module.exports.getItemById = getItemById;

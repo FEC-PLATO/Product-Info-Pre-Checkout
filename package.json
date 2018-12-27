@@ -8,7 +8,7 @@
     "start": "nodemon server/index.js",
     "seed": "node seed/item-seeder.js"
   },
-  "author": "Beth Johnson",
+  "author": "Ryan Law",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.23.1",
