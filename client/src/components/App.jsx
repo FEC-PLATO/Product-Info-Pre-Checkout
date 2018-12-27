@@ -1,5 +1,6 @@
 import React from 'react';
 import StarRatings from 'react-star-ratings';
+import Color from './Color.jsx'
 
 class App extends React.Component {
 
@@ -23,9 +24,19 @@ class App extends React.Component {
   render() {
 
     var priceStyle = {
-      fontSize: "50px",
-      padding: 20,
-      margin: 10
+      fontSize: "50px"
+    }
+    var totalRatingStyle = {
+      fontSize: "25px",
+      display: "inline-block",
+      verticalAlign: "middle",
+      padding:10
+    }
+    var questionStyle = {
+      fontSize: "20px",
+      display: "inline-block",
+      verticalAlign: "middle",
+      padding:5
     }
 
     return (
@@ -34,15 +45,15 @@ class App extends React.Component {
         <div>
           <StarRatings
             rating={this.state.items.averageRating}
-            starDimension="20px"
+            starDimension="30px"
             starSpacing="2px"
-            starRatedColor="yellow"
+            starRatedColor="#ffff00"
             numberOfStars={5}
           />
-          <span>{this.state.items.averageRating} </span>
-          <span>{this.state.items.totalRatings} </span>
-          <span>{this.state.items.totalQuestions} Questions</span>
+          <div style={totalRatingStyle}>{this.state.items.totalRatings} </div>
+          <div style={questionStyle}>{this.state.items.totalQuestions} Questions</div>
         </div>
+        <Color />
         <div>{this.state.items.colors}</div>
         <div>{this.state.items.sizes}</div>
         <div>zipcode</div>
