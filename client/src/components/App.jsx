@@ -1,6 +1,9 @@
 import React from 'react';
 import StarRatings from 'react-star-ratings';
-import Color from './Color.jsx'
+import Color from './Color.jsx';
+import Size from './Size.jsx';
+import Quantity from './Quantity.jsx';
+
 
 class App extends React.Component {
 
@@ -13,7 +16,7 @@ class App extends React.Component {
   }
 
   componentDidMount () {
-    console.log('LOCATION', window.location);
+    console.log('LOCATION', window.location.href);
     // var currentLocation = window.location.assign('http://localhost:3000/api/item/1');
     // window.location.href = 'http://localhost:3000/1';
     fetch('/api/item/1')
@@ -38,6 +41,19 @@ class App extends React.Component {
       verticalAlign: "middle",
       padding:5
     }
+    var shipItStyle = {
+      color: "white",
+      fontSize: "20px",
+      fontWeight: "bold",
+      backgroundColor: "red",
+      width: "150px",
+      height: "40px",
+      borderRadius: "5px",
+      textAlign: "center",
+      lineHeight: "40px",
+      display: "inline-block",
+      cursor: "pointer"
+    }
 
     return (
       <div>
@@ -54,9 +70,12 @@ class App extends React.Component {
           <div style={questionStyle}>{this.state.items.totalQuestions} Questions</div>
         </div>
         <Color />
-        <div>{this.state.items.colors}</div>
-        <div>{this.state.items.sizes}</div>
-        <div>zipcode</div>
+        <Size />
+        <Quantity
+          quantity={this.state.items.quantityCanBuy}
+        />
+        <div>Shipping to 95131</div>
+        <div style={shipItStyle}>Ship It</div>
       </div>
     )
   }
