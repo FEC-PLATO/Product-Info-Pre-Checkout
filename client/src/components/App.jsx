@@ -6,6 +6,7 @@ import Quantity from './Quantity.jsx';
 import Shipping from './Shipping.jsx';
 import styled, {css} from 'styled-components';
 import axios from 'axios';
+import './style.css';
 
 class App extends React.Component {
 
@@ -21,7 +22,7 @@ class App extends React.Component {
     console.log('LOCATION', window.location.href);
     // var currentLocation = window.location.assign('http://localhost:3000/api/item/1');
     // window.location.href = 'http://localhost:3000/1';
-    axios.get('/api/item/97')
+    axios.get('/api/item/1')
       .then((res) => this.setState({items: res.data}))
       .catch((err) => console.log('error: ', err))
   }

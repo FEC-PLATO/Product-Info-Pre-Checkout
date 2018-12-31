@@ -32,6 +32,13 @@ class Shipping extends React.Component {
     this.setState({zipcode: event.target.zip.value});
   }
 
+  onClickCancel() {
+    $("#cancelZip").click(function(){
+      $("#enterZipcode").toggle();
+    });
+    this.setState({zipcode: this.state.zipcode})
+  }
+
   render() {
 
     var formStyle = {
@@ -43,8 +50,9 @@ class Shipping extends React.Component {
         Shipping to :
         <span type="button" id="zipcode" onClick={this.onClickZip.bind(this)}>{this.state.zipcode}</span>
         <form id="enterZipcode" onSubmit={this.onSubmitZip.bind(this)} style={formStyle}>
-          <input  type="text" name="zip" placeholder="enter your zip code" />
+          <input  type="text" name="zip" placeholder="enter your zip code" required/>
           <input id="submitZip" type="submit" value="submit" />
+          <input id="cancelZip" type="submit" value="cancel" onClick={this.onClickCancel.bind(this)} />
         </form>
       </div>
     )
