@@ -1,12 +1,12 @@
 import React from 'react';
 import StarRatings from 'react-star-ratings';
+import Stars from './Stars.jsx'
 import Color from './Color.jsx';
 import Size from './Size.jsx';
 import Quantity from './Quantity.jsx';
 import Shipping from './Shipping.jsx';
 import styled, {css} from 'styled-components';
 import axios from 'axios';
-import './style.css';
 
 class App extends React.Component {
 
@@ -30,16 +30,19 @@ class App extends React.Component {
   render() {
 
     var priceStyle = {
-      fontSize: "50px"
+      fontSize: "45px",
+      fontFamily:"Arial Black"
     }
     var totalRatingStyle = {
-      fontSize: "25px",
+      fontSize: "12px",
+      fontFamily:"Verdana",
       display: "inline-block",
       verticalAlign: "middle",
       padding:10
     }
     var questionStyle = {
-      fontSize: "20px",
+      fontSize: "12px",
+      fontFamily:"Verdana",
       display: "inline-block",
       verticalAlign: "middle",
       padding:5
@@ -48,7 +51,7 @@ class App extends React.Component {
       color: "white",
       fontSize: "20px",
       fontWeight: "bold",
-      backgroundColor: "red",
+      backgroundColor: "rgb(203, 0, 0)",
       width: "150px",
       height: "40px",
       borderRadius: "5px",
@@ -66,7 +69,7 @@ class App extends React.Component {
             rating={this.state.items.averageRating}
             starDimension="30px"
             starSpacing="2px"
-            starRatedColor="#ffff00"
+            starRatedColor="rgb(255, 214, 0)"
             numberOfStars={5}
           />
           <div style={totalRatingStyle}>{this.state.items.totalRatings} </div>

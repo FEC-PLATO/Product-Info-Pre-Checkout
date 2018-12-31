@@ -8,6 +8,11 @@ class Quantity extends React.Component {
 
   render() {
 
+    var descriptionStyle = {
+      fontSize: "12px",
+      fontFamily:"Verdana"
+    }
+
     var quantityArr = [];
 
     for (var i = 1; i <= this.props.quantity; i++) {
@@ -15,7 +20,7 @@ class Quantity extends React.Component {
     }
 
     return (
-      <div>
+      <div style={descriptionStyle}>
       Quantity:
         <select>
           {quantityArr.map(num => {

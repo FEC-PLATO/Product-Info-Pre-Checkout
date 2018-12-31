@@ -28,18 +28,17 @@ class Color extends React.Component {
   render() {
 
     var colorBlack = {
-      backgroundColor: "black"
+      backgroundColor: "rgb(44, 44, 44)"
     }
     var colorSilver = {
-      backgroundColor: "silver"
+      backgroundColor: "rgb(191, 192, 197)"
     }
     var colorGold = {
-      backgroundColor: "gold"
+      backgroundColor: "rgb(252, 230, 209)"
     }
     var colorPink = {
-      backgroundColor: "pink"
+      backgroundColor: "rgb(255, 221, 217)"
     }
-
     var colorBox = {
       width: "40px",
       height: "40px",
@@ -49,10 +48,14 @@ class Color extends React.Component {
       margin: 5,
       cursor: "pointer"
     }
+    var descriptionStyle = {
+      fontFamily:"Arial Black",
+      fontSize: "14px"
+    }
 
     return (
       <div>
-        <div>Color: {this.state.displayColor}</div>
+        <div style={descriptionStyle}>Color: {this.state.displayColor}</div>
         <div
           style={Object.assign(colorBlack, colorBox)}
           onClick= {() => this.onClickChange('Black')}

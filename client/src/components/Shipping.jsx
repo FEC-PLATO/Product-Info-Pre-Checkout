@@ -44,15 +44,47 @@ class Shipping extends React.Component {
     var formStyle = {
       display: "none"
     }
+    var submitStyle = {
+      display: "inline-block",
+      color: "white",
+      fontSize: "10px",
+      backgroundColor: "rgb(203, 0, 0)",
+      borderRadius: "5px",
+      borderColor: "rgb(203, 0, 0)",
+      textAlign: "center",
+      height: "20px",
+      margin: 5,
+      cursor: "pointer"
+    }
+    var cancelStyle = {
+      color: "black",
+      fontSize: "10px",
+      backgroundColor: "white",
+      borderRadius: "5px",
+      borderColor: "black",
+      textAlign: "center",
+      height: "20px",
+      cursor: "pointer"
+    }
+    var descriptionStyle = {
+      fontSize: "12px",
+      fontFamily:"Verdana",
+      whiteSapce: "pre"
+    }
+    var underlineZip = {
+      textDecoration: "underline",
+      cursor: "pointer"
+    }
 
     return (
-      <div>
-        Shipping to :
-        <span type="button" id="zipcode" onClick={this.onClickZip.bind(this)}>{this.state.zipcode}</span>
+      <div style={descriptionStyle}>
+        Shipping to
+        <span type="button" id="zipcode" onClick={this.onClickZip.bind(this)} style={underlineZip}> {this.state.zipcode}</span>
         <form id="enterZipcode" onSubmit={this.onSubmitZip.bind(this)} style={formStyle}>
           <input  type="text" name="zip" placeholder="enter your zip code" required/>
-          <input id="submitZip" type="submit" value="submit" />
-          <input id="cancelZip" type="submit" value="cancel" onClick={this.onClickCancel.bind(this)} />
+          <input id="submitZip" type="submit" value="submit" style={submitStyle} />
+          <input id="cancelZip" type="submit" value="cancel" onClick={this.onClickCancel.bind(this)} style={cancelStyle} />
+
         </form>
       </div>
     )
