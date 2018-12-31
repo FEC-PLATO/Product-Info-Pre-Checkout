@@ -16,14 +16,14 @@ var itemSchema = mongoose.Schema({
 //creates an instance of the document to match the schema
 var Item = mongoose.model('Item', itemSchema);
 
-//retrieves the item by id
-// var getItemById = function (id, callback) {
-//   Item.findById(id, callback);
-// }
-
-const getItemById = function (id) {
-  return Item.findById(id);
+// retrieves the item by id
+var getItemById = function (id, callback) {
+  Item.findById(id, callback);
 }
+
+// const getItemById = function (id) {
+//   return Item.findById(id);
+// }
 
 module.exports.getItemById = getItemById;
 module.exports.Item = Item;

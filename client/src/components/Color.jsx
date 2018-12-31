@@ -46,7 +46,8 @@ class Color extends React.Component {
       border: "",
       borderRadius:"5px",
       display: "inline-block",
-      margin: 5
+      margin: 5,
+      cursor: "pointer"
     }
 
     return (

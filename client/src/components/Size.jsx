@@ -23,7 +23,8 @@ class Size extends React.Component {
       borderRadius: "5px",
       borderWidth: "1px",
       margin: 5,
-      padding: 5
+      padding: 5,
+      cursor: "pointer"
     }
 
     return (
