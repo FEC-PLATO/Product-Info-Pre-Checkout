@@ -3,6 +3,7 @@ import StarRatings from 'react-star-ratings';
 import Color from './Color.jsx';
 import Size from './Size.jsx';
 import Quantity from './Quantity.jsx';
+import Shipping from './Shipping.jsx';
 import styled, {css} from 'styled-components';
 import axios from 'axios';
 
@@ -20,7 +21,7 @@ class App extends React.Component {
     console.log('LOCATION', window.location.href);
     // var currentLocation = window.location.assign('http://localhost:3000/api/item/1');
     // window.location.href = 'http://localhost:3000/1';
-    axios.get('/api/item/1')
+    axios.get('/api/item/97')
       .then((res) => this.setState({items: res.data}))
       .catch((err) => console.log('error: ', err))
   }
@@ -75,7 +76,7 @@ class App extends React.Component {
         <Quantity
           quantity={this.state.items.quantityCanBuy}
         />
-        <div>Shipping to 95131</div>
+        <Shipping />
         <div style={shipItStyle}>Ship It</div>
       </div>
     )
