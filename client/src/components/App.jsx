@@ -47,19 +47,6 @@ class App extends React.Component {
       verticalAlign: "middle",
       padding:5
     }
-    var shipItStyle = {
-      color: "white",
-      fontSize: "20px",
-      fontWeight: "bold",
-      backgroundColor: "rgb(203, 0, 0)",
-      width: "150px",
-      height: "40px",
-      borderRadius: "5px",
-      textAlign: "center",
-      lineHeight: "40px",
-      display: "inline-block",
-      cursor: "pointer"
-    }
 
     return (
       <div>
@@ -81,7 +68,6 @@ class App extends React.Component {
           quantity={this.state.items.quantityCanBuy}
         />
         <Shipping />
-        <div style={shipItStyle}>Ship It</div>
       </div>
     )
   }
