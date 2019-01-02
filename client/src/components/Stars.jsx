@@ -13,7 +13,7 @@ class Stars extends React.Component {
 
   render() {
 
-    const starRating = Math.round(this.props.rating);
+    var starRating = Math.round(this.props.rating);
     // const starPercentage = starRating / 5 * 100;
     // const starPercentageRounded = `${Math.round(starPercentage.toFixed(1) / 10) * 10}%`
 
