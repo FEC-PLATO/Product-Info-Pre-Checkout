@@ -27,8 +27,6 @@ class App extends React.Component {
       .catch((err) => console.log('error: ', err))
   }
 
-
-
   render() {
 
     var priceStyle = {
@@ -40,7 +38,7 @@ class App extends React.Component {
       fontFamily:"Verdana",
       display: "inline-block",
       verticalAlign: "middle",
-      padding:10,
+      padding:10
     }
     var questionStyle = {
       fontSize: "12px",
@@ -71,6 +69,7 @@ class App extends React.Component {
           quantity={this.state.items.quantityCanBuy}
         />
         <Shipping />
+        <Stars rating={this.state.items.averageRating} />
       </div>
     )
   }
