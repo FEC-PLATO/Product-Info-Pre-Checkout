@@ -63,16 +63,18 @@ class Color extends React.Component {
           onMouseLeave={() => this.onMouseLeaveChange('leave')}></div>
         <div
           style={Object.assign(colorSilver, colorBox)}
-          onClick= {() => this.onClickChange('Silver')}></div>
+          onClick= {() => this.onClickChange('Space Gray')}></div>
         <div
           style={Object.assign(colorGold, colorBox)}
           onClick= {() => this.onClickChange('Gold')}></div>
         <div
           style={Object.assign(colorPink, colorBox)}
-          onClick= {() => this.onClickChange('Pink')}></div>
+          onClick= {() => this.onClickChange('Rose Gold')}></div>
       </div>
     )
   }
 }
 
 export default Color;
+
+

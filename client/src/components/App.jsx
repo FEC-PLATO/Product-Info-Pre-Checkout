@@ -22,7 +22,7 @@ class App extends React.Component {
     console.log('LOCATION', window.location.href);
     // var currentLocation = window.location.assign('http://localhost:3000/api/item/1');
     // window.location.href = 'http://localhost:3000/1';
-    axios.get('/api/item/1')
+    axios.get('/api/item/89')
       .then((res) => this.setState({items: res.data}))
       .catch((err) => console.log('error: ', err))
   }
@@ -52,6 +52,7 @@ class App extends React.Component {
       <div>
         <div style={priceStyle}>{this.state.items.price}</div>
         <div style={{borderBottom: "solid #dcdcdc"}}>
+          <Stars rating={this.state.items.averageRating} />
           <StarRatings
             rating={this.state.items.averageRating}
             starDimension="30px"
@@ -69,7 +70,6 @@ class App extends React.Component {
           quantity={this.state.items.quantityCanBuy}
         />
         <Shipping />
-        <Stars rating={this.state.items.averageRating} />
       </div>
     )
   }

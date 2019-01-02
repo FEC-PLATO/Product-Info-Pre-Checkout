@@ -36,8 +36,13 @@ class Stars extends React.Component {
       return emptyStars;
     }
 
+    var starStyle = {
+      color: "rgb(255, 214, 0)",
+      fontSize:"20px"
+    }
+
     return (
-      <div>
+      <div style={starStyle}>
       {starRating}
         <span>{getFilledStars()}</span>
         <span>{getEmptyStars()}</span>
