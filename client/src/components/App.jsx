@@ -8,6 +8,8 @@ import Quantity from './Quantity.jsx';
 import Shipping from './Shipping.jsx';
 import axios from 'axios';
 
+
+
 class App extends React.Component {
 
   constructor(props) {
@@ -50,7 +52,7 @@ class App extends React.Component {
 
     return (
       <div>
-        <div style={priceStyle}>{this.state.items.price}</div>
+        <div className="priceStyle">{this.state.items.price}</div>
         <div style={{borderBottom: "solid #dcdcdc"}}>
           <Stars rating={this.state.items.averageRating} />
           <StarRatings
