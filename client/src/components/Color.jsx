@@ -1,4 +1,5 @@
 import React from 'react';
+import $ from 'jquery';
 
 class Color extends React.Component {
 
@@ -16,6 +17,7 @@ class Color extends React.Component {
   }
 
   onMouseEnterChange(event) {
+
     this.setState({displayColor: event});
     console.log(event);
   }
@@ -58,9 +60,7 @@ class Color extends React.Component {
         <div style={descriptionStyle}>Color: {this.state.displayColor}</div>
         <div
           style={Object.assign(colorBlack, colorBox)}
-          onClick= {() => this.onClickChange('Black')}
-          onMouseEnter={() => this.onMouseEnterChange('enter')}
-          onMouseLeave={() => this.onMouseLeaveChange('leave')}></div>
+          onClick= {() => this.onClickChange('Black')}></div>
         <div
           style={Object.assign(colorSilver, colorBox)}
           onClick= {() => this.onClickChange('Space Gray')}></div>

@@ -2,6 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar as fasFaStar } from '@fortawesome/free-solid-svg-icons';
 import { faStar as farFaStar} from '@fortawesome/free-regular-svg-icons';
+import { faStarHalfAlt} from '@fortawesome/free-solid-svg-icons';
 
 
 class Stars extends React.Component {
@@ -13,28 +14,43 @@ class Stars extends React.Component {
 
   render() {
 
-    var starRating = Math.round(this.props.rating);
     // const starPercentage = starRating / 5 * 100;
     // const starPercentageRounded = `${Math.round(starPercentage.toFixed(1) / 10) * 10}%`
-
-
-    var getFilledStars = function () {
-
-      var filledStars = [];
-      for (var i = 0; i < starRating; i++) {
-        filledStars.push(<FontAwesomeIcon icon={fasFaStar} />)
-      }
-      return filledStars;
+    var roundToHalf = function(num) {
+      return Math.round(num * 2) / 2;
     }
 
-    var getEmptyStars = function () {
+    var starRating = roundToHalf(this.props.rating);
 
-      var emptyStars = [];
-      for (var i = 0; i < (5 - starRating); i++) {
-        emptyStars.push(<FontAwesomeIcon icon={farFaStar} />)
+    var getStars = function () {
+
+      var starArr = [];
+      var filledStar = <FontAwesomeIcon icon={fasFaStar} />;
+      var unfilledStar = <FontAwesomeIcon icon={farFaStar} />
+      var halfFilledStar = <FontAwesomeIcon icon={faStarHalfAlt} />
+
+      if (Number.isInteger(starRating)) {
+
+        for (var i = 1; i <= starRating; i++) {
+          starArr.push(filledStar);
+        }
+        for (var i = 1; i <= 5 - starRating; i++) {
+          starArr.push(unfilledStar);
+        }
+      } else {
+
+        for (var i = 1; i <= Math.floor(starRating); i++) {
+          starArr.push(filledStar);
+        }
+        starArr.push(halfFilledStar);
+
+        for (var i = 1; i <= 5 - starArr.length; i++) {
+          starArr.push(unfilledStar);
+        }
       }
-      return emptyStars;
+      return starArr;
     }
+
 
     var starStyle = {
       color: "rgb(255, 214, 0)",
@@ -42,11 +58,9 @@ class Stars extends React.Component {
     }
 
     return (
-      <div style={starStyle}>
-      {starRating}
-        <span>{getFilledStars()}</span>
-        <span>{getEmptyStars()}</span>
-      </div>
+      <span style={starStyle}>
+        {getStars()}
+      </span>
     )
   }
 }
