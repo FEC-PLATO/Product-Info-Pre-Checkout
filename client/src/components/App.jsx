@@ -24,16 +24,21 @@ class App extends React.Component {
     console.log('LOCATION', window.location.href);
     // var currentLocation = window.location.assign('http://localhost:3000/api/item/1');
     // window.location.href = 'http://localhost:3000/1';
-    axios.get('/api/item/54')
+    axios.get('/api/item/9')
       .then((res) => this.setState({items: res.data}))
       .catch((err) => console.log('error: ', err))
+
+    // fetch('/api/item/1')
+    //   .then(response => response.json())
+    //   .then(data => this.setState({items: data}))
   }
 
   render() {
 
     var priceStyle = {
-      fontSize: "45px",
-      fontFamily:"Arial Black"
+      fontSize: "30px",
+      fontFamily:"Arial",
+      fontWeight: "bold"
     }
     var totalRatingStyle = {
       fontSize: "12px",
