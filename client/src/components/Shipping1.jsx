@@ -14,19 +14,23 @@ class Shipping1 extends React.Component {
 
     this.onClickZipCode = this.onClickZipCode.bind(this);
     this.handleInputChange = this.handleInputChange.bind(this);
+    this.onZipSubmit = this.onZipSubmit.bind(this);
   }
 
   onClickZipCode() {
     this.setState({showEnterZip: !this.state.showEnterZip})
   }
 
-  onZipSubmit() {
-    console.log('hello');
+  handleInputChange (e) {
+    this.setState({enterZip: e.target.value});
   }
 
-  handleInputChange (e) {
-    console.log('changed', e.target.value);
-    this.setState({enterZip: e.target.value});
+  onZipSubmit(e) {
+    event.preventDefault();
+    this.setState({
+      zip: e.target.zip.value,
+      showEnterZip: !this.state.showEnterZip
+    })
   }
 
 

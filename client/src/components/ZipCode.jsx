@@ -5,9 +5,9 @@ class ZipCode extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      showZipInput: true
-    }
+    // this.state = {
+    //   showZipInput: true
+    // }
   }
 
   render() {
@@ -38,10 +38,9 @@ class ZipCode extends React.Component {
 
     return (
       <div>
-        <form id="enterZipcode">
-          <input  type="text" name="zip" value={this.props.enterZip} placeholder="enter your zip code" onChange={() => this.props.handleInputChange(event)} required/>
-          <input id="submitZip" type="submit" value="submit" onClick={() => this.props.onZipSubmit()} style={submitStyle} />
-          <input id="cancelZip" type="submit" value="cancel" style={cancelStyle} />
+        <form id="enterZipcode" onSubmit={() => this.props.onZipSubmit(event)}>
+          <input type="text" name="zip" value={this.props.enterZip} placeholder="enter your zip code" onChange={() => this.props.handleInputChange(event)} required/>
+          <input type="submit" value="submit" style={submitStyle} />
         </form>
       </div>
     )
