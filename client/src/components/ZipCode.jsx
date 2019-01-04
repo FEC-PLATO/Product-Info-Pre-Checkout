@@ -4,16 +4,12 @@ class ZipCode extends React.Component {
 
   constructor(props) {
     super(props);
-
-    // this.state = {
-    //   showZipInput: true
-    // }
   }
 
   render() {
 
+
     var submitStyle = {
-      display: "inline-block",
       color: "white",
       fontSize: "10px",
       backgroundColor: "rgb(203, 0, 0)",
@@ -33,14 +29,17 @@ class ZipCode extends React.Component {
       borderColor: "black",
       textAlign: "center",
       height: "20px",
-      cursor: "pointer"
+      cursor: "pointer",
     }
 
     return (
       <div>
         <form id="enterZipcode" onSubmit={() => this.props.onZipSubmit(event)}>
           <input type="text" name="zip" value={this.props.enterZip} placeholder="enter your zip code" onChange={() => this.props.handleInputChange(event)} required/>
-          <input type="submit" value="submit" style={submitStyle} />
+          <div>
+            <input type="submit" value="submit" style={submitStyle} />
+            <button type="button" onClick={() => this.props.onClickCancel()} style={cancelStyle}>cancel</button>
+          </div>
         </form>
       </div>
     )
