@@ -1,13 +1,24 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import CurrentLocation from './CurrentLocation.jsx'
 
 class ZipCode extends React.Component {
 
   constructor(props) {
     super(props);
+
+    this.state = {
+      showCurrentLocation: false
+    }
+    this.onClickLocation = this.onClickLocation.bind(this);
+  }
+
+  onClickLocation() {
+    this.setState({showCurrentLocation: true})
   }
 
   render() {
-
 
     var submitStyle = {
       color: "white",
@@ -33,8 +44,16 @@ class ZipCode extends React.Component {
       cursor: "pointer",
     }
 
+    var currentLocationStyle = {
+      textDecoration: "underline",
+      fontFamily: "Verdana",
+      cursor: "pointer"
+    }
+
     return (
       <div>
+        <div style={currentLocationStyle} onClick={() => this.onClickLocation()}><FontAwesomeIcon icon={faMapMarkerAlt}/>use my current location</div>
+        {this.state.showCurrentLocation ? <CurrentLocation /> : null}
         <form id="enterZipcode" onSubmit={() => this.props.onZipSubmit(event)}>
           <input type="text" name="zip" value={this.props.enterZip} placeholder="enter your zip code" onChange={() => this.props.handleInputChange(event)} required/>
           <div>

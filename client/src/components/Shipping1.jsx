@@ -149,7 +149,7 @@ class Shipping1 extends React.Component {
             padding="5"
             radius="4"
           >
-            <span><FontAwesomeIcon icon={faQuestionCircle} /></span>
+            <span style={{cursor: "pointer"}}><FontAwesomeIcon icon={faQuestionCircle} /></span>
           </Tooltip>
         </div>
         <input id="checkStores" value= "Check other stores" style={checkStoreStyle} />
