@@ -27,6 +27,7 @@ class ZipCode extends React.Component {
       backgroundColor: "white",
       borderRadius: "5px",
       borderColor: "black",
+      borderWidth: "0.5px",
       textAlign: "center",
       height: "20px",
       cursor: "pointer",

@@ -1,6 +1,10 @@
 import React from 'react';
 import ZipCode from './ZipCode.jsx';
 import ShippingDate from './ShippingDate.jsx';
+import Tooltip from 'react-simple-tooltip';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faQuestionCircle } from '@fortawesome/free-regular-svg-icons';
+
 
 class Shipping1 extends React.Component {
 
@@ -138,7 +142,15 @@ class Shipping1 extends React.Component {
           <span>Free ship to store</span>
           <div style={shipItStyle}>Pick it up</div>
           <div style={{color: "rgb(1, 131, 0)"}}>Get it by Sat, Jan 5 </div>
-          <span>at San Jose South</span>
+          <span>at San Jose South </span>
+          <Tooltip
+            content="5630 Cottle Rd San Jose 95123"
+            fontSize= "10px"
+            padding="5"
+            radius="4"
+          >
+            <span><FontAwesomeIcon icon={faQuestionCircle} /></span>
+          </Tooltip>
         </div>
         <input id="checkStores" value= "Check other stores" style={checkStoreStyle} />
       </div>

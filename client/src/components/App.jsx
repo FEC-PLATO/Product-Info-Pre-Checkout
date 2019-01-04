@@ -20,7 +20,8 @@ class App extends React.Component {
       items: [],
       showResults: false,
       displayColor: '',
-      displaySize: ''
+      displaySize: '',
+      hover: false
     }
 
     this.onClickColor = this.onClickColor.bind(this);
@@ -31,7 +32,7 @@ class App extends React.Component {
     console.log('LOCATION', window.location.href);
     // var currentLocation = window.location.assign('http://localhost:3000/api/item/1');
     // window.location.href = 'http://localhost:3000/1';
-    axios.get('/api/item/15')
+    axios.get('/api/item/51')
       .then((res) => this.setState({items: res.data}))
       .catch((err) => console.log('error: ', err))
 
@@ -57,6 +58,13 @@ class App extends React.Component {
     this.setState({displaySize: event})
   }
 
+    handleMouseIn() {
+      this.setState({ hover: true })
+    }
+
+    handleMouseOut() {
+      this.setState({ hover: false })
+    }
   render() {
 
     var priceStyle = {
