@@ -146,9 +146,9 @@ class Shipping1 extends React.Component {
           <span>at San Jose South </span>
           <Tooltip
             content="5630 Cottle Rd San Jose 95123"
-            fontSize= "10px"
-            padding="5"
-            radius="4">
+            fontSize="10px"
+            padding={5}
+            radius={4}>
             <span style={{cursor: "pointer"}}><FontAwesomeIcon icon={faQuestionCircle} /></span>
           </Tooltip>
         </div>

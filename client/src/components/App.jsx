@@ -109,6 +109,7 @@ class App extends React.Component {
           <div style={{textAlign: "center"}}>
             {this.state.items && this.state.items.colors && this.state.items.colors.map(color =>
               <Color
+                key={color}
                 color={color}
                 onClickColor={this.onClickColor}
               />
@@ -119,6 +120,7 @@ class App extends React.Component {
           <div style={{textAlign: "center"}}>
             {this.state.items && this.state.items.sizes && this.state.items.sizes.map(size =>
               <Size
+                key={size}
                 size={size}
                 onClickSize={this.onClickSize}
               />

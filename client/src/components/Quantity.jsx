@@ -25,7 +25,7 @@ class Quantity extends React.Component {
       Quantity:
         <select>
           {quantityArr.map(num => {
-            return <option>{num}</option>
+            return <option key={num}>{num}</option>
           })}
         </select>
       </div>
