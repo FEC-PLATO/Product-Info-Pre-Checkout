@@ -29,10 +29,10 @@ class App extends React.Component {
   }
 
   componentDidMount () {
-    console.log('LOCATION', window.location.href);
-    // var currentLocation = window.location.assign('http://localhost:3000/api/item/1');
-    // window.location.href = 'http://localhost:3000/1';
-    axios.get('/api/item/51')
+
+    var enteredId = Number(window.location.pathname.split('/')[1]);
+
+    axios.get(`/api/item/${enteredId}`)
       .then((res) => this.setState({items: res.data}))
       .catch((err) => console.log('error: ', err))
 

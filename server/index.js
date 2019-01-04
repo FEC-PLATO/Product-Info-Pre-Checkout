@@ -6,7 +6,10 @@ var db = require('../db')
 var path = require('path');
 
 app.use(bodyParser.json());
-app.use(express.static(__dirname + '/../client/dist'));
+// app.use(express.static(__dirname + '/../client/dist'));
+
+app.use('/', express.static('./client/dist/'));
+app.use(/\/\d+\//, express.static('./client/dist/'));
 
 //will redirect user to the proper endpoint
 app.get('/', function(req, res) {
