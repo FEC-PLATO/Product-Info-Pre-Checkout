@@ -1,46 +1,29 @@
 import React from 'react';
-import $ from 'jquery';
 
 class Color extends React.Component {
 
   constructor(props) {
     super(props);
-
-    this.state = {
-      displayColor: '',
-      borderColor: ''
-    }
-  }
-
-  onClickChange (event) {
-    this.setState({displayColor: event});
-  }
-
-  onMouseEnterChange(event) {
-
-    this.setState({displayColor: event});
-    console.log(event);
-  }
-
-  onMouseLeaveChange(event) {
-    this.setState({displayColor: ''});
-    console.log(event)
   }
 
   render() {
 
-    var colorBlack = {
-      backgroundColor: "rgb(44, 44, 44)"
+    var color = {
+
+      'black': {
+        backgroundColor: "rgb(44, 44, 44)"
+      },
+      'silver': {
+        backgroundColor: "rgb(191, 192, 197)"
+      },
+      'gold': {
+        backgroundColor: "rgb(252, 230, 209)"
+      },
+      'pink': {
+        backgroundColor: "rgb(255, 221, 217)"
+      }
     }
-    var colorSilver = {
-      backgroundColor: "rgb(191, 192, 197)"
-    }
-    var colorGold = {
-      backgroundColor: "rgb(252, 230, 209)"
-    }
-    var colorPink = {
-      backgroundColor: "rgb(255, 221, 217)"
-    }
+
     var colorBox = {
       width: "40px",
       height: "40px",
@@ -56,21 +39,9 @@ class Color extends React.Component {
     }
 
     return (
-      <div>
-        <div style={descriptionStyle}>Color: {this.state.displayColor}</div>
-        <div
-          style={Object.assign(colorBlack, colorBox)}
-          onClick= {() => this.onClickChange('Black')}></div>
-        <div
-          style={Object.assign(colorSilver, colorBox)}
-          onClick= {() => this.onClickChange('Space Gray')}></div>
-        <div
-          style={Object.assign(colorGold, colorBox)}
-          onClick= {() => this.onClickChange('Gold')}></div>
-        <div
-          style={Object.assign(colorPink, colorBox)}
-          onClick= {() => this.onClickChange('Rose Gold')}></div>
-      </div>
+      <span>
+        <span style={Object.assign(color[this.props.color], colorBox)} onClick={()=>this.props.onClickColor(this.props.color)}></span>
+      </span>
     )
   }
 }

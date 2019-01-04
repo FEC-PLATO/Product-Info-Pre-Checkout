@@ -5,10 +5,6 @@ class Size extends React.Component {
 
   constructor(props) {
     super(props);
-
-    this.state = {
-      displaySize: ''
-    }
   }
 
   render() {

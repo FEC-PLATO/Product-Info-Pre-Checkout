@@ -19,9 +19,11 @@ class App extends React.Component {
     this.state = {
       items: [],
       showResults: false,
+      displayColor: '',
       displaySize: ''
     }
 
+    this.onClickColor = this.onClickColor.bind(this);
     this.onClickSize = this.onClickSize.bind(this);
   }
 
@@ -36,6 +38,19 @@ class App extends React.Component {
     // fetch('/api/item/1')
     //   .then(response => response.json())
     //   .then(data => this.setState({items: data}))
+  }
+
+  onClickColor (event) {
+
+    if(event === 'black') {
+      this.setState({displayColor: 'Black'})
+    } else if (event === 'silver') {
+      this.setState({displayColor: 'Space Gray'})
+    } else if (event === 'gold') {
+      this.setState({displayColor: 'Gold'})
+    } else if (event === 'pink') {
+      this.setState({displayColor: 'Rose Gold'})
+    }
   }
 
   onClickSize (event) {
@@ -73,12 +88,22 @@ class App extends React.Component {
       <div>
         <div style={priceStyle}>{this.state.items.price}</div>
         <div style={{borderBottom: "solid #dcdcdc"}}>
+
           <Stars rating={this.state.items.averageRating} />
           <span style={totalRatingStyle}>{this.state.items.totalRatings} </span>
           <span style={questionStyle}>{this.state.items.totalQuestions} Questions</span>
         </div>
+
         <PlanDetails />
-        <Color />
+
+        <div style={descriptionStyle}>Color: {this.state.displayColor}</div>
+        {this.state.items && this.state.items.colors && this.state.items.colors.map(color =>
+          <Color
+            color={color}
+            onClickColor={this.onClickColor}
+          />
+        )}
+
         <div style={descriptionStyle}>Size: {this.state.displaySize}</div>
         {this.state.items && this.state.items.sizes && this.state.items.sizes.map(size =>
           <Size
@@ -87,12 +112,12 @@ class App extends React.Component {
           />
         )}
 
-
-
         <Quantity
           quantity={this.state.items.quantityCanBuy}
         />
+
         <Shipping1 />
+
       </div>
     )
   }
