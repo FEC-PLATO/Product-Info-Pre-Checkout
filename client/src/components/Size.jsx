@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 class Size extends React.Component {
 
   constructor(props) {
@@ -8,10 +9,6 @@ class Size extends React.Component {
     this.state = {
       displaySize: ''
     }
-  }
-
-  onClickSize (event) {
-    this.setState({displaySize: event})
   }
 
   render() {
@@ -34,12 +31,9 @@ class Size extends React.Component {
     }
 
     return (
-      <div>
-        <div style={descriptionStyle}>Size: {this.state.displaySize}</div>
-        <div style={sizeStyle} onClick={() => this.onClickSize('64GB')}>64GB</div>
-        <div style={sizeStyle} onClick={() => this.onClickSize('256GB')}>256GB</div>
-        <div style={sizeStyle} onClick={() => this.onClickSize('512GB')}>512GB</div>
-      </div>
+      <span style={descriptionStyle}>
+        <span style={sizeStyle} name="size" onClick={() => this.props.onClickSize(this.props.size)}> {this.props.size}</span>
+      </span>
     )
   }
 }

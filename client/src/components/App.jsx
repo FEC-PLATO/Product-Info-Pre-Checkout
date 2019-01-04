@@ -6,6 +6,7 @@ import Color from './Color.jsx';
 import Size from './Size.jsx';
 import Quantity from './Quantity.jsx';
 import Shipping from './Shipping.jsx';
+import Shipping1 from './Shipping1.jsx';
 import axios from 'axios';
 
 
@@ -16,21 +17,29 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      items: []
+      items: [],
+      showResults: false,
+      displaySize: ''
     }
+
+    this.onClickSize = this.onClickSize.bind(this);
   }
 
   componentDidMount () {
     console.log('LOCATION', window.location.href);
     // var currentLocation = window.location.assign('http://localhost:3000/api/item/1');
     // window.location.href = 'http://localhost:3000/1';
-    axios.get('/api/item/9')
+    axios.get('/api/item/15')
       .then((res) => this.setState({items: res.data}))
       .catch((err) => console.log('error: ', err))
 
     // fetch('/api/item/1')
     //   .then(response => response.json())
     //   .then(data => this.setState({items: data}))
+  }
+
+  onClickSize (event) {
+    this.setState({displaySize: event})
   }
 
   render() {
@@ -55,6 +64,11 @@ class App extends React.Component {
       padding:5
     }
 
+    var descriptionStyle = {
+      fontFamily:"Arial Black",
+      fontSize: "14px"
+    }
+
     return (
       <div>
         <div style={priceStyle}>{this.state.items.price}</div>
@@ -65,11 +79,20 @@ class App extends React.Component {
         </div>
         <PlanDetails />
         <Color />
-        <Size />
+        <div style={descriptionStyle}>Size: {this.state.displaySize}</div>
+        {this.state.items && this.state.items.sizes && this.state.items.sizes.map(size =>
+          <Size
+            size={size}
+            onClickSize={this.onClickSize}
+          />
+        )}
+
+
+
         <Quantity
           quantity={this.state.items.quantityCanBuy}
         />
-        <Shipping />
+        <Shipping1 />
       </div>
     )
   }
