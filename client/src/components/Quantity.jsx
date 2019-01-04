@@ -11,6 +11,7 @@ class Quantity extends React.Component {
     var descriptionStyle = {
       fontSize: "12px",
       fontFamily:"Verdana",
+      margin: 10
     }
 
     var quantityArr = [];

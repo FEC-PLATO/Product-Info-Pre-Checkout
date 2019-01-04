@@ -89,7 +89,8 @@ class App extends React.Component {
 
     var descriptionStyle = {
       fontFamily:"Arial Black",
-      fontSize: "14px"
+      fontSize: "14px",
+      textAlign: "center"
     }
 
     return (
@@ -104,22 +105,26 @@ class App extends React.Component {
 
         <PlanDetails />
 
-        <div style={descriptionStyle}>Color: {this.state.displayColor}</div>
-        {this.state.items && this.state.items.colors && this.state.items.colors.map(color =>
-          <Color
-            color={color}
-            onClickColor={this.onClickColor}
-          />
-        )}
-
-        <div style={descriptionStyle}>Size: {this.state.displaySize}</div>
-        {this.state.items && this.state.items.sizes && this.state.items.sizes.map(size =>
-          <Size
-            size={size}
-            onClickSize={this.onClickSize}
-          />
-        )}
-
+        <div style={descriptionStyle}>Color <span style={{fontFamily: "Arial"}}>{this.state.displayColor}</span>
+          <div style={{textAlign: "center"}}>
+            {this.state.items && this.state.items.colors && this.state.items.colors.map(color =>
+              <Color
+                color={color}
+                onClickColor={this.onClickColor}
+              />
+            )}
+          </div>
+        </div>
+        <div style={descriptionStyle}>Size <span style={{fontFamily: "Arial"}}>{this.state.displaySize}</span>
+          <div style={{textAlign: "center"}}>
+            {this.state.items && this.state.items.sizes && this.state.items.sizes.map(size =>
+              <Size
+                size={size}
+                onClickSize={this.onClickSize}
+              />
+            )}
+          </div>
+        </div>
         <Quantity
           quantity={this.state.items.quantityCanBuy}
         />

@@ -14,7 +14,7 @@ class Size extends React.Component {
       fontSize: "10px",
       fontFamily: "Verdana",
       borderStyle: "solid",
-      borderColor: "gray",
+      borderColor: "rgb(217, 215, 210)",
       borderRadius: "5px",
       borderWidth: "1px",
       margin: 5,

@@ -6,7 +6,8 @@ var CurrentLocation = () =>  {
     fontFamily: "Verdana",
     fontSize: "10px",
     color: "rgb(168, 87,48)",
-    padding: 5
+    marginTop: "-20px",
+    marginBottom: "15px"
   }
 
   return (

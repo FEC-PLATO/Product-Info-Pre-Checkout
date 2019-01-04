@@ -27,8 +27,10 @@ class Color extends React.Component {
     var colorBox = {
       width: "40px",
       height: "40px",
-      border: "",
+      borderStyle: "solid",
+      borderWidth: "thin",
       borderRadius:"5px",
+      borderColor: "rgb(217, 215, 210)",
       display: "inline-block",
       margin: 5,
       cursor: "pointer"

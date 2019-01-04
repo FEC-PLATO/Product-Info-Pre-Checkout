@@ -117,15 +117,16 @@ class Shipping1 extends React.Component {
       borderWidth: "1px",
       textAlign: "center",
       height: "25px",
-      margin: 8,
+      marginTop: "10px",
+      marginLeft: "-3px",
       cursor: "pointer"
     }
 
     return (
       <div style={descriptionStyle}>
         <div>
-        Shipping to
-          <span type="button" onClick={this.onClickZipCode.bind(this)} style={underlineZip}> {this.state.zip}</span>
+          <span style={{marginRight: "4px"}}>Shipping to</span>
+          <span type="button" onClick={this.onClickZipCode.bind(this)} style={underlineZip}>{this.state.zip}</span>
           <span style={shipStyle}>Ship It</span>
           {this.state.showEnterZip ?
             <ZipCode
@@ -147,8 +148,7 @@ class Shipping1 extends React.Component {
             content="5630 Cottle Rd San Jose 95123"
             fontSize= "10px"
             padding="5"
-            radius="4"
-          >
+            radius="4">
             <span style={{cursor: "pointer"}}><FontAwesomeIcon icon={faQuestionCircle} /></span>
           </Tooltip>
         </div>

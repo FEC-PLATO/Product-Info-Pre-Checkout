@@ -47,7 +47,8 @@ class ZipCode extends React.Component {
     var currentLocationStyle = {
       textDecoration: "underline",
       fontFamily: "Verdana",
-      cursor: "pointer"
+      cursor: "pointer",
+      marginBottom: "25px"
     }
 
     return (
@@ -55,7 +56,7 @@ class ZipCode extends React.Component {
         <div style={currentLocationStyle} onClick={() => this.onClickLocation()}><FontAwesomeIcon icon={faMapMarkerAlt}/>use my current location</div>
         {this.state.showCurrentLocation ? <CurrentLocation /> : null}
         <form id="enterZipcode" onSubmit={() => this.props.onZipSubmit(event)}>
-          <input type="text" name="zip" value={this.props.enterZip} placeholder="enter your zip code" onChange={() => this.props.handleInputChange(event)} required/>
+          <input style={{width:"200px", height:"25px"}} type="text" name="zip" value={this.props.enterZip} placeholder="enter your zip code" onChange={() => this.props.handleInputChange(event)} required/>
           <div>
             <input type="submit" value="submit" style={submitStyle} />
             <button type="button" onClick={() => this.props.onClickCancel()} style={cancelStyle}>cancel</button>
