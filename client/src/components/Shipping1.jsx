@@ -114,6 +114,7 @@ class Shipping1 extends React.Component {
       fontSize: "10px",
       fontFamily: "Verdana",
       color: "black",
+      backgroundColor: "rgb(247, 247, 247)",
       borderRadius: "5px",
       borderColor: "black",
       borderWidth: "1px",
@@ -157,10 +158,10 @@ class Shipping1 extends React.Component {
             radius={4}>
             <span style={{cursor: "pointer"}}><FontAwesomeIcon icon={faQuestionCircle} /></span>
           </Tooltip>
+          <div>
+            <input id="checkStores" value= "Check other stores" style={checkStoreStyle} />
+          </div>
         </div>
-
-
-        <input id="checkStores" value= "Check other stores" style={checkStoreStyle} />
       </div>
     )
   }
