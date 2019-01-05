@@ -1,17 +1,10 @@
 import React from 'react';
 
+
 class Size extends React.Component {
 
   constructor(props) {
     super(props);
-
-    this.state = {
-      displaySize: ''
-    }
-  }
-
-  onClickSize (event) {
-    this.setState({displaySize: event})
   }
 
   render() {
@@ -21,7 +14,7 @@ class Size extends React.Component {
       fontSize: "10px",
       fontFamily: "Verdana",
       borderStyle: "solid",
-      borderColor: "gray",
+      borderColor: "rgb(217, 215, 210)",
       borderRadius: "5px",
       borderWidth: "1px",
       margin: 5,
@@ -34,12 +27,9 @@ class Size extends React.Component {
     }
 
     return (
-      <div>
-        <div style={descriptionStyle}>Size: {this.state.displaySize}</div>
-        <div style={sizeStyle} onClick={() => this.onClickSize('64GB')}>64GB</div>
-        <div style={sizeStyle} onClick={() => this.onClickSize('256GB')}>256GB</div>
-        <div style={sizeStyle} onClick={() => this.onClickSize('512GB')}>512GB</div>
-      </div>
+      <span style={descriptionStyle}>
+        <span style={sizeStyle} name="size" onClick={() => this.props.onClickSize(this.props.size)}> {this.props.size}</span>
+      </span>
     )
   }
 }

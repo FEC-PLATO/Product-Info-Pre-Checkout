@@ -44,7 +44,7 @@ class Stars extends React.Component {
         }
         starArr.push(halfFilledStar);
 
-        for (var i = 1; i <= 5 - starArr.length; i++) {
+        for (var i = 0; i <= 5 - starArr.length; i++) {
           starArr.push(unfilledStar);
         }
       }
@@ -61,6 +61,7 @@ class Stars extends React.Component {
       <span style={starStyle}>
         {getStars()}
       </span>
+
     )
   }
 }

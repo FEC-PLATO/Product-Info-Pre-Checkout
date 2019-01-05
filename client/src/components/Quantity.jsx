@@ -11,6 +11,7 @@ class Quantity extends React.Component {
     var descriptionStyle = {
       fontSize: "12px",
       fontFamily:"Verdana",
+      margin: 10
     }
 
     var quantityArr = [];
@@ -24,7 +25,7 @@ class Quantity extends React.Component {
       Quantity:
         <select>
           {quantityArr.map(num => {
-            return <option>{num}</option>
+            return <option key={num}>{num}</option>
           })}
         </select>
       </div>
