@@ -104,7 +104,9 @@ class Shipping1 extends React.Component {
       textAlign: "center",
       lineHeight: "30px",
       display: "inline-block",
-      margin: 15,
+      marginTop: 10,
+      marginLeft: 20,
+      marginBottom: 5,
       cursor: "pointer"
     }
 
@@ -123,8 +125,9 @@ class Shipping1 extends React.Component {
     }
 
     return (
-      <div style={descriptionStyle}>
-        <div>
+      <div>
+
+        <div style={descriptionStyle}>
           <span style={{marginRight: "4px"}}>Shipping to</span>
           <span type="button" onClick={this.onClickZipCode.bind(this)} style={underlineZip}>{this.state.zip}</span>
           <span style={shipStyle}>Ship It</span>
@@ -139,7 +142,10 @@ class Shipping1 extends React.Component {
         <div>
           {this.state.showShipDate ? <ShippingDate /> :null}
         </div>
-        <div>
+
+        <div style={{color: "white", fontSize: "7.5px"}}>X</div>
+
+        <div style={descriptionStyle}>
           <span>Free ship to store</span>
           <div style={shipItStyle}>Pick it up</div>
           <div style={{color: "rgb(1, 131, 0)"}}>Get it by Sat, Jan 5 </div>
@@ -152,6 +158,8 @@ class Shipping1 extends React.Component {
             <span style={{cursor: "pointer"}}><FontAwesomeIcon icon={faQuestionCircle} /></span>
           </Tooltip>
         </div>
+
+
         <input id="checkStores" value= "Check other stores" style={checkStoreStyle} />
       </div>
     )
