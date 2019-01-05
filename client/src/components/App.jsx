@@ -1,5 +1,4 @@
 import React from 'react';
-import StarRatings from 'react-star-ratings';
 import Stars from './Stars.jsx';
 import PlanDetails from './PlanDetails.jsx';
 import Color from './Color.jsx';
