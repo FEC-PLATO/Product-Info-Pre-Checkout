@@ -1,10 +1,12 @@
-var express = require ('express');
+var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
+var cors = require('cors');
 
-var db = require('../db')
+var db = require('../db');
 var path = require('path');
 
+app.use(cors());
 app.use(bodyParser.json());
 // app.use(express.static(__dirname + '/../client/dist'));
 
@@ -23,12 +25,12 @@ app.get('/api/item/:id', function(req, res) {
       console.log('There was an error: ', err);
       res.status(404).send('Error!');
     } else {
-      console.log('Here is the item: ', result)
+      console.log('Here is the item: ', result);
       res.json(result);
     }
   });
 });
 
-app.listen(3000, function() {
-  console.log('Listening on port 3000...');
+app.listen(3002, function() {
+  console.log('Listening on port 3002...');
 });
